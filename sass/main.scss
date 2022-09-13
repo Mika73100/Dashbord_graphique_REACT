@@ -8,5 +8,7 @@
 @import "../src/pages/users/users.scss";
 
 //ici j'appel le CSS des composants:
-// @import "/my-react-app/src/components/navbar/navbar.scss";
-// @import "/my-react-app/src/components/sidebar/sidebar.scss";
+@import "/my-react-app/src/components/navbar/navbar.scss";
+@import "/my-react-app/src/components/sidebar/sidebar.scss";
+@import "/my-react-app/src/components/chart/chart.scss";
+@import "/my-react-app/src/components/featured/featured.scss";

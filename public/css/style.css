@@ -1,14 +1,17 @@
-.home {
-  display: flex;
-}
-.home .homeContainer {
-  flex: 6;
-}
-.home .homeContainer .widgets,
-.home .homeContainer .charts {
-  display: flex;
-  padding: 20px;
-  gap: 20px;
-}
+/* Error: Can't find stylesheet to import.
+ *    ,
+ * 11 | @import "/my-react-app/src/components/navbar/navbar.scss";
+ *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   sass\main.scss 11:9  root stylesheet */
 
-/*# sourceMappingURL=style.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a    \2577 \a 11 \2502  @import \"/my-react-app/src/components/navbar/navbar.scss\";\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\main.scss 11:9  root stylesheet";
+}
