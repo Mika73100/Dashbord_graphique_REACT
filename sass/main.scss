@@ -1,14 +1,14 @@
+// Les pages :
+@import'../src/pages/home/home.scss';
+@import'../src/pages/list/list.scss';
+@import'../src/pages/login/login.scss';
+@import'../src/pages/new/new.scss';
+@import'../src/pages/single/single.scss';
+@import'../src/pages/users/users.scss';
 
-//ici j'appel le CSS des pages:
-@import "../src/pages/home/home.scss";
-@import "../src/pages/list/list.scss";
-@import "../src/pages/login/login.scss";
-@import "../src/pages/new/new.scss";
-@import "../src/pages/single/single.scss";
-@import "../src/pages/users/users.scss";
-
-//ici j'appel le CSS des composants:
-@import "/my-react-app/src/components/navbar/navbar.scss";
-@import "/my-react-app/src/components/sidebar/sidebar.scss";
-@import "/my-react-app/src/components/chart/chart.scss";
-@import "/my-react-app/src/components/featured/featured.scss";
+//composant :
+@import'../src/components/datatable/datatable.scss';
+@import'../src/components/featured/featured.scss';
+@import'../src/components/navbar/navbar.scss';
+@import'../src/components/sidebar/sidebar.scss';
+@import'../src/components/table/table.scss';

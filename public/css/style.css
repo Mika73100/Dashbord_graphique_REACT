@@ -1,17 +1,338 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 11 | @import "/my-react-app/src/components/navbar/navbar.scss";
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   sass\main.scss 11:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 11 \2502  @import \"/my-react-app/src/components/navbar/navbar.scss\";\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\main.scss 11:9  root stylesheet";
+.home {
+  display: flex;
 }
+.home .homeContainer {
+  flex: 6;
+}
+.home .homeContainer .widgets,
+.home .homeContainer .charts {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+.home .homeContainer .charts {
+  padding: 5px 20px;
+}
+.home .homeContainer .listContainer {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  margin: 20px;
+}
+.home .homeContainer .listContainer .listTitle {
+  font-weight: 500;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.list {
+  display: flex;
+  width: 100%;
+}
+.list .listContainer {
+  flex: 6;
+}
+
+.datatable {
+  height: 600px;
+  padding: 20px;
+}
+.datatable .datatableTitle {
+  width: 100%;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.datatable .datatableTitle .link {
+  text-decoration: none;
+  color: green;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid green;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.datatable .cellWithImg {
+  display: flex;
+  align-items: center;
+}
+.datatable .cellWithImg .cellImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.datatable .cellWithStatus {
+  padding: 5px;
+  border-radius: 5px;
+}
+.datatable .cellWithStatus.active {
+  background-color: rgba(0, 128, 0, 0.05);
+  color: green;
+}
+.datatable .cellWithStatus.pending {
+  background-color: rgba(255, 217, 0, 0.05);
+  color: goldenrod;
+}
+.datatable .cellWithStatus.passive {
+  background-color: rgba(255, 0, 0, 0.05);
+  color: crimson;
+}
+.datatable .cellAction {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.datatable .cellAction .viewButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: darkblue;
+  border: 1px dotted rgba(0, 0, 139, 0.596);
+  cursor: pointer;
+}
+.datatable .cellAction .deleteButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: crimson;
+  border: 1px dotted rgba(220, 20, 60, 0.6);
+  cursor: pointer;
+}
+
+.featured {
+  flex: 2;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 10px;
+}
+.featured .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}
+.featured .top .title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.featured .bottom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.featured .bottom .featuredChart {
+  width: 100px;
+  height: 100px;
+}
+.featured .bottom .title {
+  font-weight: 500;
+  color: gray;
+}
+.featured .bottom .amount {
+  font-size: 30px;
+}
+.featured .bottom .desc {
+  font-weight: 300;
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+}
+.featured .bottom .summary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.featured .bottom .summary .item {
+  text-align: center;
+}
+.featured .bottom .summary .item .itemTitle {
+  font-size: 14px;
+  color: gray;
+}
+.featured .bottom .summary .item .itemResult {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.featured .bottom .summary .item .itemResult.positive {
+  color: green;
+}
+.featured .bottom .summary .item .itemResult.negative {
+  color: red;
+}
+
+.navbar {
+  height: 50px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+.navbar .wrapper {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .wrapper .search {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid lightgray;
+  padding: 3px;
+}
+.navbar .wrapper .search input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.navbar .wrapper .search input::placeholder {
+  font-size: 12px;
+}
+.navbar .wrapper .items {
+  display: flex;
+  align-items: center;
+}
+.navbar .wrapper .items .item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+.navbar .wrapper .items .item .icon {
+  font-size: 20px;
+}
+.navbar .wrapper .items .item .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.navbar .wrapper .items .item .counter {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  min-height: 100vh;
+  background-color: white;
+}
+.sidebar .top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar .top .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6439ff;
+}
+.sidebar hr {
+  height: 0;
+  border: 0.5px solid rgb(230, 227, 227);
+}
+.sidebar .center {
+  padding-left: 10px;
+}
+.sidebar .center ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar .center ul .title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.sidebar .center ul li {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.sidebar .center ul li:hover {
+  background-color: #ece8ff;
+}
+.sidebar .center ul li .icon {
+  font-size: 18px;
+  color: #7451f8;
+}
+.sidebar .center ul li span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  margin-left: 10px;
+}
+.sidebar .bottom {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.sidebar .bottom .colorOption {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #7451f8;
+  cursor: pointer;
+  margin: 5px;
+}
+.sidebar .bottom .colorOption:nth-child(1) {
+  background-color: whitesmoke;
+}
+.sidebar .bottom .colorOption:nth-child(2) {
+  background-color: #333;
+}
+.sidebar .bottom .colorOption:nth-child(3) {
+  background-color: darkblue;
+}
+
+.table .cellWrapper {
+  display: flex;
+  align-items: center;
+}
+.table .cellWrapper .image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.table .status {
+  padding: 5px;
+  border-radius: 5px;
+}
+.table .status.Approved {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.151);
+}
+.table .status.Pending {
+  color: goldenrod;
+  background-color: rgba(189, 189, 3, 0.103);
+}
+
+/*# sourceMappingURL=style.css.map */
